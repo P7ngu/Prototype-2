@@ -25,12 +25,22 @@ public class DetectCollisions : MonoBehaviour
             gameManager.AddLives(-1);
             Destroy(gameObject);
         }
+
         else if (other.CompareTag("Animal"))
         {
             Debug.Log("Animal Fed! +5");
             gameManager.AddScore(5); //if you destroy the animal
             Destroy(gameObject);
             Destroy(other.gameObject);
+        }
+
+         else
+        {
+            Debug.Log("Animal Fed! +5");
+            gameManager.AddScore(5);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            Debug.Log("ELSE");
         }
     }
 }
