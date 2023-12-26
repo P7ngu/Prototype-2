@@ -30,6 +30,16 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         //Time... is needed to make it update not every frame but every second
+
+
+        //Launch the pizza
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //The space has been pressed, let's launch it
+            //instantiate, copies of an object that already exists
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            //We use transform.position aka the player's position
+        }
         
     }
 }
