@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6632898117382109565}
   - component: {fileID: 5212741648423595995}
   - component: {fileID: 2805109520896372589}
+  - component: {fileID: 5519769950406585566}
+  - component: {fileID: 6490569567183830188}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -97,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a782d6d9867a4132967314c6b94ac1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 30
 --- !u!114 &2805109520896372589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +112,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e033bb88f26ed40a69f4916892a3128d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5519769950406585566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184431121154553807}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4900275, y: 0.8962962, z: 0.58680075}
+  m_Center: {x: 0.008611083, y: -0.02926669, z: -0.020301258}
+--- !u!54 &6490569567183830188
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184431121154553807}
+  serializedVersion: 4
+  m_Mass: 30
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
