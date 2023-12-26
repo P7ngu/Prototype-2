@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Transform projectileSpawnPoint;
+
     public float horizontalInput;
     public float verticalInput;
 
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             //The space has been pressed, let's launch it
             //instantiate, copies of an object that already exists
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
             //We use transform.position aka the player's position
         }
         

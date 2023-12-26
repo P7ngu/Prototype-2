@@ -778,8 +778,6 @@ GameObject:
   - component: {fileID: 619604912511504360}
   - component: {fileID: -8009300153818465087}
   - component: {fileID: 3071690296977760978}
-  - component: {fileID: 3559858894388996280}
-  - component: {fileID: -6986380540891036598}
   - component: {fileID: -861949752647237805}
   m_Layer: 0
   m_Name: Animal_Fox_02
@@ -882,45 +880,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09865314, y: 0.3402812, z: 0.29605228}
   m_Center: {x: -0.0056863846, y: 0.096181236, z: 0.012202501}
---- !u!114 &3559858894388996280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915124754524457857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc18f797ac5d4f318b9bf8d3791f20b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &-6986380540891036598
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915124754524457857}
-  serializedVersion: 4
-  m_Mass: 30
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
 --- !u!114 &-861949752647237805
 MonoBehaviour:
   m_ObjectHideFlags: 0
