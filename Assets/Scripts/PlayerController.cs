@@ -5,9 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 20.0f;
+    public float verticalInput;
+
+    public float horizontalSpeed = 20.0f;
+    public float verticalSpeed = 25.0f;
+
     public float xRange = 23;
+    public float zRange = 10;
+
     public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +23,11 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {//left side
+    {
+        // ** HORIZONTAL **
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * horizontalSpeed);
+        //left side
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -27,10 +38,19 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        //Time... is needed to make it update not every frame but every second
-
+        // ** VERTICAL **
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * verticalSpeed);
+        //up
+        if (transform.position.z < -zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
+        }
+        // down
+        if (transform.position.z > zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+        }
 
         //Launch the pizza
         if (Input.GetKeyDown(KeyCode.Space))
