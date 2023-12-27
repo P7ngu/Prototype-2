@@ -28,7 +28,6 @@ public class DetectCollisions : MonoBehaviour
 
         else if (other.CompareTag("Animal"))
         {
-            Debug.Log("Animal Fed! +5");
             gameManager.AddScore(5); //if you destroy the animal
             Destroy(gameObject);
             Destroy(other.gameObject);
@@ -36,7 +35,6 @@ public class DetectCollisions : MonoBehaviour
 
          else
         {
-            Debug.Log("Animal Fed! +5");
             gameManager.AddScore(5);
             Destroy(gameObject);
             Destroy(other.gameObject);
